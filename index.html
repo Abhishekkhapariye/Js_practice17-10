@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html>
+     <head>
+          <title>My Website Title</title>
+         
+     </head>
+     <body>
+          <h1>DOM Selector</h1>
+          <h2 id="myId"> header 2</h2>
+          <h3 class = "myclass">Hii</h3>
+          <h3 class = "myclass">Hii</h3>
+          <h3 class = "myclass">Hii</h3>
+
+          <script>  
+      
+          let ht = document.documentElement
+          let bo = document.body;
+          let he = document.head;
+          let ti = document.title;
+
+       
+
+          console.log(ht);
+          console.log(bo);
+          console.log(he);
+          console.log(ti);
+
+//  getElementById("myId") Id selector which return obj of element of html page to manupulate it
+          // let doc = document.getElementById("myId")
+          // console.log(doc);
+          // doc.innerHTML = "changed Text";
+          // doc.style.color = "red";
+          // doc.style.backgroundColor = "black";
+
+// getElementByClass("myClass") use to return class obj any modify content          
+               let cls = document.getElementsByClassName("myclass"); //created an array of myclass type with 3 element b/c all element are in same class
+               console.log(cls);
+              
+               console.log(cls.length); //   o/p:-3
+               console.log(typeof(cls)); 
+               for(let element of cls){
+                    console.log(element);
+                    element.style.color = "red";
+                    element.style.backgroundColor = "black";
+               }
+           </script>
+          
+          
+          Hello 
+     </body>
+</html>
