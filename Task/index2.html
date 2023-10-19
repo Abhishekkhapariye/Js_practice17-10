@@ -8,33 +8,41 @@
     <!-- The Head tag is used to create a title of web page, CSS syntax for a web page, and helps in written a JavaScript code. -->
     <script>
         function printMessage() {
-    let p =fetch('http://demo6623443.mockable.io/')
-    
+            let p = fetch('http://demo6623443.mockable.io/')
+            // let p = fetch('https://goweather.herokuapp.com/weather/ny/')
 
- 
-    p.then((value1)=>{
-      console.log(value1.status)
-      console.log(value1.statusText)
-      return value1.json()           //return response object containing status code and ok
-    })
-    .then((value2)=>{
-      console.log(value2.msg)
-      document.getElementById('output').innerHTML = value2.msg
-    }) 
 
-     
-  }
-//   printMessage()
+
+            p.then((value1) => {
+                console.log(value1.status)
+                console.log(value1.statusText)
+                return value1.json()         //return response object containing status code and ok
+            })
+                .then((value2) => {
+                    console.log(value2.name)
+                    document.getElementById('output').innerHTML = value2.name
+
+                })
+                
+      
+            
+        }
+        const changeText = () => {
+            var element = document.getElementById("output").innerText = "Ajay";
+            value1.name = element;
+        }
+
+
     </script>
 </Head>
 
 <Body>
-    <p id="output">Data From myService</p>
+    <p id="output">Message From myService </p>
     <button type="button" class="btn btn-primary" onclick="printMessage()">Call Service </button>
-    <button type="button" class="btn btn-secondary">Secondary</button>
+    <button type="button" class="btn btn-secondary" onclick="changeText()">Change Name</button>
     <button type="button" class="btn btn-success">Success</button>
 
-  
+
 
     <!-- The Body tag is used to display the content on a web page. In this example we do not specify any content or any tag, so in output nothing will display on the web page. -->
 </Body>
