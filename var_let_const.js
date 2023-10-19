@@ -17,4 +17,3 @@ console.log(b);
 console.log(e);
 console.log(z);
 console.log(d);
-console.log(c);
