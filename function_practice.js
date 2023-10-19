@@ -22,6 +22,7 @@ const hello = ()=>{
    
     return  "How are you!!"
 }
+module.exports = hello;
 
 // call function
     // let  input = prompt("Enter Age");
